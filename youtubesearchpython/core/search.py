@@ -117,7 +117,10 @@ class SearchCore(RequestCore, RequestHandler, ComponentHandler):
             if playlistElementKey in element.keys() and findPlaylists:
                 self.resultComponents.append(self._getPlaylistComponent(element))
             if shelfElementKey in element.keys() and findVideos:
-                for shelfElement in self._getShelfComponent(element)['elements']:
+                shelfComponent = self._getShelfComponent(element)
+                if (not 'elements' in shelfComponent) or shelfComponent['elements'] == None:
+                    continue
+                for shelfElement in shelfComponent['elements']:
                     self.resultComponents.append(
                         self._getVideoComponent(shelfElement, shelfTitle=self._getShelfComponent(element)['title']))
             if richItemKey in element.keys() and findVideos:

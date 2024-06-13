@@ -29,7 +29,10 @@ class ComponentHandler:
             },
         }
         component['link'] = 'https://www.youtube.com/watch?v=' + component['id']
-        component['channel']['link'] = 'https://www.youtube.com/channel/' + component['channel']['id']
+        
+        if 'channel' in component and component['channel'] != None \
+            and 'link' in component['channel'] and component['channel']['link'] != None:
+            component['channel']['link'] = 'https://www.youtube.com/channel/' + component['channel']['id']
         component['shelfTitle'] = shelfTitle
         return component
 
@@ -61,7 +64,10 @@ class ComponentHandler:
             'thumbnails':                     self._getValue(playlist, ['thumbnailRenderer', 'playlistVideoThumbnailRenderer', 'thumbnail', 'thumbnails']),
         }
         component['link'] = 'https://www.youtube.com/playlist?list=' + component['id']
-        component['channel']['link'] = 'https://www.youtube.com/channel/' + component['channel']['id']
+        
+        if 'channel' in component and component['channel'] != None \
+            and 'id' in component['channel'] and component['channel']['id'] != None:
+            component['channel']['link'] = 'https://www.youtube.com/channel/' + component['channel']['id']
         return component
     
     def _getVideoFromChannelSearch(self, elements: list) -> list:
