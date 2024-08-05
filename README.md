@@ -1,5 +1,5 @@
 ## Note from Jamie: 
-#### This is a fork of the [YoutubeSearchPython repo from alexmercerind](https://github.com/alexmercerind/youtube-search-python), created to fix some issues it was causing in my [MediaUtil](https://github.com/JamiEbeigh/MediaUtil) repo. The original project is no longer supported, so I will not be pushing any changes/contributions to that repo. I intend to eventually replace the functionality that this package is providing to MediaUtil, but I gotta prioritize my tasks and this works for now. 
+#### This is a fork of the [YoutubeSearchPython repo from alexmercerind](https://github.com/alexmercerind/youtube-search-python), created to fix some issues it was causing in my [MediaUtil](https://github.com/JamiEbeigh/MediaUtil) repo. The original project is no longer supported, so I will not be pushing any changes/contributions to that repo. I intend to eventually replace the functionality that this package is providing to MediaUtil, but I gotta prioritize my tasks and this works for now. Below is the readme from the original repo.
 
 
 # [youtube-search-python](https://github.com/alexmercerind/youtube-search-python)
